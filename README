@@ -1,0 +1,3 @@
+In order to run the project write on command line
+
+java -jar FileManipulate params:String fileToRead , String fileToWrite , String ActionName.
