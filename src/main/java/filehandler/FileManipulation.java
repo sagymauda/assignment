@@ -4,7 +4,7 @@ import actions.*;
 import java.util.List;
 
 public class FileManipulation {
-    public void manipulate(String fileFrom, String fileTo, ActionName actionName) throws Exception {
+    public void manipulate(String fileFrom, String fileTo, String actionName) throws Exception {
         ActionList actionList = new ActionList();
         Action action = null;
 
@@ -15,7 +15,7 @@ public class FileManipulation {
             throw  new Exception("need to enter file location for: copy to");
         }
         //read from the file
-        List<Character> charactersList = FileHandler.readFromFileUrl(fileFrom);
+        List<Character> charactersList = FilHandlerRead.readFromFileUrl(fileFrom);
 
 
         //see if Enum is in keys list
@@ -33,7 +33,7 @@ public class FileManipulation {
        charactersList = action.apply(charactersList);
 
         //write to file
-        FileHandler.writeToFileUrl(fileTo, charactersList);
+        FileHandlerWrite.writeToFileUrl(fileTo, charactersList);
     }
 
 

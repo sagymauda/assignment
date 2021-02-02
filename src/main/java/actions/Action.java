@@ -6,4 +6,5 @@ public interface Action {
 
       List<Character> apply (List<Character> characters);
 
+      String getName();
 }

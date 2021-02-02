@@ -16,4 +16,9 @@ public class ActionShuffle implements Action {
         return characters;
     }
 
+    @Override
+    public String getName() {
+        return   this.getClass().getName();
+    }
+
 }

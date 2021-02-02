@@ -9,8 +9,8 @@ public class ActionSort implements Action {
 
     @Override
     public List<Character> apply(List<Character> characters) {
-        int j = 0;
-        char temp = 0;
+        int j;
+        char temp;
         for (int i = 0; i < characters.size(); i++) {
             for (j = 0; j < characters.size(); j++) {
                 if (characters.get(j) > characters.get(i)) {
@@ -25,6 +25,11 @@ public class ActionSort implements Action {
             System.out.println(c);
         }
         return characters;
+    }
+
+    @Override
+    public String getName() {
+        return   this.getClass().getName();
     }
 
 }

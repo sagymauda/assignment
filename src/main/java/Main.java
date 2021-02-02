@@ -18,11 +18,11 @@ public class Main {
 
 
         FileManipulation fileManipulation = new FileManipulation();
-        fileManipulation.manipulate(args[0], args[1], ActionName.valueOf(args[2]));
+        fileManipulation.manipulate(args[0], args[1],args[2]);
         SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
         Date date = new Date(System.currentTimeMillis());
         InsertRecordToDb insertRecordToDb = new InsertRecordToDb();
-        insertRecordToDb.insert(ActionName.valueOf(args[2]) ,args[0],args[1],date);
+        insertRecordToDb.insert( args[2] ,args[0],args[1],date);
 
 
     }
